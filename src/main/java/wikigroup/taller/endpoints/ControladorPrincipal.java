@@ -16,7 +16,7 @@ public class ControladorPrincipal {
 
     @GetMapping("/principal")
     public String principal(){
-        return "Principal";
+        return "";
     }
     
     @GetMapping("/presentacion")
