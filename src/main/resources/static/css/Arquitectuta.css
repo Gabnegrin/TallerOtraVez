@@ -30,7 +30,7 @@ h1{
     width: 100%;
     max-width: 1920px;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 .header{
     color: whitesmoke;
@@ -73,10 +73,11 @@ h1{
     background-color: #2e92be;
 }
 .footer{
-    background-color: #E4E4E4  ;
+    background-color: #E4E4E4;
     padding: 1.6rem;
     margin-top: 6rem;
     text-align: center;
+    align-items: center;
 }
 .footer p{
     text-align: center;
@@ -86,4 +87,23 @@ h1{
     padding: 1.4rem;
     background-color: white;
     border-radius: 1rem;
+}
+.containerPres{
+    margin-top: 1rem;
+}
+.containerPres table{
+    margin: 1rem;
+}
+.containerPres table tr td{
+    padding: 1rem;
+}
+.containerPres h2{
+    font-size: 1.4rem;
+}
+
+.perfil{
+    max-width: 200px;
+}
+.subti{
+    font-size: 2rem;
 }

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WikiGroup</title>
 
-    <link rel="stylesheet" href="Desarrollo.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/Desarrollo.css">
 </head>
 <body>
     <header class="header">
         <div class="container1 headerfijo">
             <nav class="navigation">
                 <ul>
-                    <li><a href="Principal.html" class="logo"><img src="imgs/LogoWikiGroup.png" alt="WikiGroup" class="imagelogo"></a></li>
+                    <li><a href="Principal.html" class="logo"><img src="/src/main/resources/static/imgs/LogoWikiGroup.png" alt="WikiGroup" class="imagelogo"></a></li>
                     <li><a href="Presentacion.html">Presentacion</a></li>
                     <li><a href="Descripcion.html">Descripcion</a></li>
                     <li><a href="Requerimientos.html">Requerimientos</a></li>
@@ -28,23 +28,111 @@
     <main>
         <div class="container cuadro">
             <h1>Endpoints</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi numquam
-                 quisquam illo sunt. Labore iure, odio hic doloremque ab, aperiam tempore facil
-                 is eum vel totam cumque, sequi temporibus at?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas similique debitis 
-                facere consequatur, corporis quis placeat sed nemo voluptas aut nam ad officia 
-                architecto recusandae? Dolorem iure facilis labore maxime. Lorem ipsum dolor, sit amet consectetur 
-                adipisicing elit. Omnis nobis laudantium modi sapiente facilis! Architecto a tenetur aperiam temporibus 
-                magni qui quidem iure perspiciatis laudantium suscipit, delectus impedit possimus adipisci?
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, tenetur. Corrupti beatae non commodi,
-                 suscipit sit quaerat debitis facere odit itaque, sequi totam numquam at pariatur laudantium maxime e
-                 xcepturi assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit assumenda optio iusto
-                  harum. Dolore repudiandae, sit fugit ex laboriosam deserunt doloremque, alias iusto assumenda vero 
-                  aspernatur! Alias eos expedita asperiores!
-            </p>
-            
-
+            <ol class="listaN">
+                <li><h3>Bienvenido(principal)</h3>
+                    <p>Endpoint, principal de la pagina web, al que se llegar al clickear en la 
+                        pagina y al clickear en el logo
+                    </p>
+                </li>
+                <li><h3>Registrarse(registro)</h3>
+                    <p>Endpoint al cual se llegar despues de seleccionar registrarse en la pagina
+                        principal, contiene el formulario de registro en la pagina web
+                    </p>
+                </li>
+                <li><h3>Iniciar sesion(iniciar-sesion)</h3>
+                    <p>Endpoint, al cual se llegar despues de seleccionar iniciar sesion en la pagina
+                        principal, contiene un campo de usuario y otro con contrase&ntilde;a
+                    </p>
+                </li>
+                <li><h3>Cliente(cliente ingresdo)</h3>
+                    <p>Endpoint, al cual se llegar despues de iniciar sesion en el endpoint 
+                        <b class="resalto">iniciar sesion</b>, esta es la pagina de usuario donde 
+                        hay un mensaje de bienvenida y una barra de navegacion diferente
+                    </p>
+                </li>
+                <li><h3>Admin(administrador ingresado)</h3>
+                    <p>Endpoint, al cual se llegar despues de iniciar sesion con un usuario 
+                        reconocido como admin, despues de <b class="resalto">iniciar sesion</b>.
+                    </p>
+                </li>
+                <li><h3>Ver lista de propiedades(lista-propiedades)</h3>
+                    <p>Endpoint, al cual se llegar despues de seleccionar ver lista de propiedades
+                        en la barra de navegacion, se llega desde el endpoint 
+                        <b class="resalto">cliente</b> 
+                    </p>
+                    <ol>
+                        <li><h3>Crear propiedad(crear-propiedad)</h3>
+                        <p>Endpoint al que se llega despues de seleccionar crear propiedad en 
+                        <b class="resalto">Ver lista de propiedades</b>, contiene el formulario
+                        de crear propiedad asi como la opcion de agregar imagen
+                        </p>
+                        </li>
+                        <li><h3>Editar propiedad(editar-propiedad)</h3>
+                        <p>Endpoint al que se llega despues de seleccionar editar propiedad en 
+                        <b class="resalto">Ver lista de propiedades</b>, contiene el formulario
+                        de editar propiedad asi como la opcion de agregar imagen
+                        </p>
+                        </li>
+                    </ol>
+                </li>
+                <li><h3>Ver Solicitudes(ver-solicitudes)</h3>
+                    <p>Endpoint al cual se llega despues de seleccionar ver solicitudes en el
+                        endpoint <b class="resalto">cliente</b>
+                    </p>
+                    <ol>
+                        <li><h3>Ver solicitud(ver-solicitud)</h3>
+                        <p>Endpoint al que se llega despues de seleccionar una solicitud en 
+                        <b class="resalto">Ver solicitudes</b>, contiene la pagina con los
+                        detalles de la solicitud seleccionada
+                        </p>
+                        </li>
+                        <li><h3>Calificar arrendatario(calificacion-solicitud)</h3>
+                        <p>Endpoint al que se llega despues de seleccionar calificar en 
+                        <b class="resalto">Ver solicitudes</b>, contiene el formulario
+                        de calificacion
+                        </p>
+                        </li>
+                    </ol>
+                </li>
+                <li><h3>Buscar propiedad(buscar-propiedad)</h3>
+                    <p>Endpoint, al cual se llegar despues de seleccionar la opcion ver buscar
+                        propiedad en la barra de busqueda de <b class="resalto">Admin</b>
+                    </p>
+                    <ol>
+                        <li><h3>Solicitar arriendo(solicitar-arriendo)</h3>
+                        <p>Endpoint, al cual se llega despues de haber selccionado una propiedad
+                            en buscar propiedad, en <b class="resalto">Buscar propiedad</b>, 
+                            contiene los detalles de esta, asi como un boton de aceptar
+                        </p>
+                        </li>
+                    </ol>
+                </li>
+                <li><h3>Ver solicitudes de arriendo(ver-solicitudes-arriendo)</h3>
+                    <p>Endpoint, al cual se llegar despues de seleccioanar ver solicitudes
+                        de arreindo en el endpoint <b class="resalto">Admin</b>
+                    </p>
+                    <ol>
+                        <li><h3>Pagar(pago)</h3>
+                        <p>Endpoint, al cual se llega despues de haber selccionado pagar
+                            en <b class="resalto">Ver solicitudes de arriendo</b>,  
+                            contiene los detalles de pago, asi como un boton de aceptar
+                        </p>
+                        </li>
+                        <li><h3>Calificar finca(calificacion-finca)</h3>
+                        <p>Endpoint, al cual se llega despues de haber selccionado calificar
+                            finca en <b class="resalto">Ver solicitudes de arriendo</b>
+                            contiene el formulario de calificacion
+                        </p>
+                        </li>
+                        <li><h3>Calificar arrendatario(calificacion-encargado)</h3>
+                        <p>Endpoint, al cual se llega despues de haber selccionado calificar
+                            arrendatario en <b class="resalto">Ver solicitudes de arriendo</b>
+                            contiene el formulario de calificacion
+                        </p>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
         </div>
     </main>
     <footer class="footer">

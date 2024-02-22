@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WikiGroup</title>
 
-    <link rel="stylesheet" href="Requerimientos.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/Requerimientos.css">
 </head>
 <body>
     <header class="header">
         <div class="container1 headerfijo">
             <nav class="navigation">
                 <ul>
-                    <li><a href="Principal.html" class="logo"><img src="imgs/LogoWikiGroup.png" alt="WikiGroup" class="imagelogo"></a></li>
+                    <li><a href="Principal.html" class="logo"><img src="/src/main/resources/static/imgs/LogoWikiGroup.png" alt="WikiGroup" class="imagelogo"></a></li>
                     <li><a href="Presentacion.html">Presentacion</a></li>
                     <li><a href="Descripcion.html">Descripcion</a></li>
                     <li><a href="Requerimientos.html">Requerimientos</a></li>
@@ -28,25 +28,159 @@
     <main>
         <div class="container cuadro">
             <h1>Requerimientos del projecto</h1>
-            <p>A continuacion se muestran los requerimientos para el proyecto:</p>
-           
-            </p>
         </div>
         <div class="container cuadro containerPres">
-            <h1>Requerimientos Funcionales</h1>
+            <h1 class="subti">Requerimientos Funcionales</h1>
             <ol>
                 <table>
                     <thead>
                         <tr>
                             <th>Funcionalidad</th>
                             <th>Descripcion</th>
+                            <th>Asociado</th>
                         </tr>
                     </thead>
+                    <tbody class="letraPeq">
+                        <tr>
+                            <td>Creacion de cuenta</td>
+                            <td>El usuario cliente debe poder crear una cuenta; se le deben
+                                solicitar datos necesarios junto conuna casilla final para registrar
+                                una vez finalizada la activacion.
+                            </td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Activacion de cuenta</td>
+                            <td>Al enviar el registro el sistema debe de enviar un mensaje
+                                de activacion de cuenta al correo electronico con el fin de 
+                                comprobar la identidad
+                            </td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Autenticacion</td>
+                            <td>Una vez hecho el registro el sistema de poder determinar
+                                correctamente cuando el usuario ingrese
+                            </td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Ver propiedades</td>
+                            <td>Una vez dentro el usuario cliente debe poder ver la lista de 
+                                propiedades que ha creado anteriormente
+                            </td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Crear propiedad</td>
+                            <td>El cliente debe poder agregar propiedades a la lista de propiedades
+                                creadas
+                            </td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Editar propiedad</td>
+                            <td>El cliente debe poder seleccionar una de las propiedades de 
+                                su lista y editar los contenidos de la misma
+                            </td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Subir foto de propiedad</td>
+                            <td>El cliente debe poder subir una foto de como es la propiedad</td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Eliminar(desactivar propiedad)</td>
+                            <td>El cliente debe poder eliminar una de sus propiedades, no obstante
+                                se tiene que hacer con soft-delete
+                            </td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Ver solicitud de arriendo</td>
+                            <td>El cliente debe poder ver las solicitudes de arriendo que de 
+                                arriendo que se han hecho a sus propiedades
+                            </td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Aceptar solicitud de arriendo</td>
+                            <td>El cliente debe poder aceptar la solicitud de arriendo</td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Cancelar solicitud de arriendo</td>
+                            <td>El cliente debe poder rechazar la solicitud de arriendo</td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Calificar arrendatario</td>
+                            <td>El cliente debe poder calificar como se comporto el arrendatario
+                                del cual acepto la solicitud</td>
+                            <td>Cliente</td>
+                        </tr>
+                        <tr>
+                            <td>Creacion de cuenta</td>
+                            <td>El administrado debe poder crear na cunta; se deben de 
+                                solicitar los datos necesarios
+                            </td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>Activacion de usuario</td>
+                            <td>Una vez hecha la solicitud se debe enviar un correo de activacion
+                                para chequear su identidad
+                            </td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>Autenticacion de usuario</td>
+                            <td>Una vez aceptada, este debe poder entrar a la aplicacion con sus
+                                credenciales de forma correcta
+                            </td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>Buscar propiedades</td>
+                            <td>El admin debera poder buscar propiedades</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>Solicitar arriendo</td>
+                            <td>Seleccionada una propiedad debe de poder hacer una solicitud
+                                para arrendar la propiedad
+                            </td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>Ver solicitudes de arriendo</td>
+                            <td>El admin debera de poder ver la solicitudes que ha hecho</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>Pagar arriendo</td>
+                            <td>El admin debe de poder pagar el arriendo que hizo</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>Calificar Finca</td>
+                            <td>El admin debe de poder calificar su estadia en la propiedad</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td>Calificar Arrendatario</td>
+                            <td>El admin debe de poder calificar a la persona con la que trato
+                                para su estadia
+                            </td>
+                            <td>Admin</td>
+                        </tr>
+                    </tbody>
                 </table>
             </ol>
         </div>
         <div class="container cuadro containerPres">
-            <h1>Requerimientos no Funcionales</h1>
+            <h1 class="subti">Requerimientos no Funcionales</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, tenetur, suscipit, iste ipsam 
             velit totam quae ipsa distinctio iure adipisci eligendi incidunt delectus facere molesti
             as aspernatur repudiandae a? Molestiae, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
