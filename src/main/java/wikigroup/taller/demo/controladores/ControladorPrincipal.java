@@ -1,4 +1,4 @@
-package wikigroup.taller.endpoints;
+package wikigroup.taller.demo.controladores;
 
 //puerto 24000
 
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/plantillas")
+@RequestMapping("/grupo25/plantillas")
 public class ControladorPrincipal {
 
     @GetMapping("/principal")
     public String principal(){
-        return "";
+        return "Principal";
     }
     
     @GetMapping("/presentacion")
