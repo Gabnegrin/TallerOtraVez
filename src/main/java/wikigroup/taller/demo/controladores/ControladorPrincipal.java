@@ -21,35 +21,35 @@ public class ControladorPrincipal {
     
     @GetMapping("/presentacion")
     public String presentacion(){
-        return "Presentacion.html";
+        return "Presentacion";
     }
     @GetMapping("/descripcion")
     public String descripcion(){
-        return "Descripcion.html";
+        return "Descripcion";
     }
     @GetMapping("/requerimientos")
     public String requerimientos(){
-        return "Requerimientos.html";
+        return "Requerimientos";
     }
     @GetMapping("/arquitectura")
     public String arquitectura(){
-        return "Arquitectura.html";
+        return "Arquitectura";
     }
     @GetMapping("/desarrollo")
     public String desarrollo(){
-        return "Desarrollo.html";
+        return "Desarrollo";
     }
     @GetMapping("/pruebas")
     public String pruebas(){
-        return "Pruebas.html";
+        return "Pruebas";
     }
     @GetMapping("/despliegue")
     public String despliegue(){
-        return "Despliegue.html";
+        return "Despliegue";
     }
     @GetMapping("/contactenos")
     public String contactenos(){
-        return "Contactenos.html";
+        return "Contactenos";
     }
 
 }
