@@ -26,12 +26,12 @@ public class contactenos {
     private int semestre;
     private String descripcion;
     
-    public contactenos (String nombre, String apellido, String correo, int semestre, String decripcion){
+    public contactenos(String nombre, String apellido, String correo, int semestre, String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.semestre = semestre;
-        this.descripcion = decripcion;
+        this.descripcion = descripcion;
     }
 }
 

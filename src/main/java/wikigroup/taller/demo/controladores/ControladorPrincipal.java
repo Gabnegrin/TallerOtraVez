@@ -61,4 +61,9 @@ public class ControladorPrincipal {
         return servicerepo.AgregarContacto(datos);
     }
 
-}
+    @GetMapping("/intento")
+    public String intento(){
+        return "Principal";
+    }
+    }
+
