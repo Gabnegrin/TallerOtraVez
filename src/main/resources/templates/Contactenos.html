@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WikiGroup</title>
-
     <link rel="stylesheet" href="/grupo25/css/Contactenos.css">
 </head>
 <body>
@@ -26,24 +25,26 @@
         </div>
     </header>
     <main>
-        <div class="container cuadro">
-            <h1>Contactanos</h1>
-            <p>Esta pagina web fue hecha como un primer acercamiento a el tema de programacion web. Un acercamiento mucho mas completo,
-                que el permitido en clase dando al poco tiempo para ver cada tema de 2 horas, por ello este taller reflejara nuestros
-                conocimientos adqueridos, y la habilidad que tenemos para menejar html, css, js y agl de thymeleaf.</p>
-            <p>Los involucrados en WikiGroup somos Gabriel, Santiago y Sergio, todos estudiantes de ingenieria de sistemas,
-                que buscamos el mayor conocimiento en el tema, y un entendimiento lo suficientemente alto, para poder pasar la materia... 
-                obviamente, si se da el caso tambien poder trabajar en el area. Es por eso, que talleres y projectos como estos que a pesar
-                de sencillos, son enriquecedores. Si quiere conocer mas de nostros por favor vaya a presentacion, donde encontrar una breve
-                descripcion, junto con algunas habilidades y posiciones elegidas en la realizacion del projecto
-            </p>
-            <p>Si en cambio desea ver de que se va a tratar el projecto, por favor referirse a dscripcion. Estas opciones estan arriba
-                en la barra de busqueda, con 1 click podra a ir a cualquiera de las paginas. Asi pues para mayor documentacion puede ver
-                requerimientos, arquitectura, desarrollo pruebas y Despliegue. Cada opcion explorara un poco mas como funciona esta pagina, y 
-                sobretodo cuales son los conceptos a tener en cuenta del projecto final.
-            </p>
-            
+        <div class="container cuadro margenesextra">
+            <form id="contact-form">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" maxlength="100" required><br>
 
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" maxlength="100" required><br>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" maxlength="100" required><br>
+
+                <label for="semestre">Semestre:</label>
+                <input type="number" id="semestre" name="semestre" min="0" max="16" required><br>
+
+                <label for="descripcion">Descripción:</label><br>
+                <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+            <div id="error-message" style="color: red;"></div>
         </div>
     </main>
     <footer class="footer">
@@ -51,6 +52,7 @@
             <p>Pagina creada por Gabriel Negrin, Santiago Fandi y Sergio Parra</p>
         </div>
     </footer>
-    
+
+    <script src="/grupo25/js/Contactenos.js"></script>
 </body>
 </html>
