@@ -7,8 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import wikigroup.taller.demo.entidad.contactenos;
+import wikigroup.taller.demo.service.servicerepo;
 
 @Controller
 @RequestMapping("/grupo25/plantillas")
@@ -50,6 +54,11 @@ public class ControladorPrincipal {
     @GetMapping("/contactenos")
     public String contactenos(){
         return "Contactenos";
+    }
+    @PostMapping("/agregar")
+    public contactenos add(@RequestParam String nombres, @RequestParam String apellidos, @RequestParam String correo, @RequestParam int semestre, @RequestParam String descripcion){
+        contactenos datos = new contactenos(nombres,apellidos,correo,semestre,descripcion);
+        return servicerepo.AgregarContacto(datos);
     }
 
 }
